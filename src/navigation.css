@@ -1,0 +1,85 @@
+#navigationcontent{
+    display: flex; 
+    justify-content: center;
+    color:purple;
+    
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    background-color: hsl(0, 8%, 77%);
+    font-weight: 600;
+}
+.desktopmenu{
+    padding: 2rem;
+    font-size: 1.5rem;
+    
+   
+}
+.desktopmenu:hover{
+    cursor:pointer;
+    color: brown;
+    text-decoration: underline;
+}
+.active {
+    color: red;
+  }
+.medicalimage{
+    height: 4rem;
+    width: 3.5rem;
+    margin-top: 10px;
+}
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: marquee 60s linear infinite;
+    font-size: 3rem;
+    font-weight: bolder;
+    color: lightgoldenrodyellow;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+  #mmc{
+    color:white;
+   padding-top: 2.5rem;
+   padding-left:5px;
+    
+  }
+
+  #introcont{
+    font-size: 2rem;
+    display: flex; 
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  button{
+    background-color: rgb(107, 40, 40);
+padding: 1rem;
+border-radius: 10px;
+color:rgb(231, 225, 225);
+
+
+  }
+  button:hover{
+    background-color: palevioletred;
+    color:yellow;
+
+  }
+  #btn{
+    text-align: center;
+  }
+  #calendar{
+    width: 10%;
+    float: right;
+    margin: 10px;
+  }
+  #bottom{
+    display: flex;
+    width: 100%;
+  }
