@@ -1,21 +1,24 @@
 import './navigation.css';
-import Calendar from './calendar';
-import { Link } from 'react-router-dom';
-import med from './assets/medlogo.png';
-import Slideshow from './slideshow';
+import Net from './assets/net.png';
+import React, { useState } from 'react'
+import Menu from './assets/hamburger.png';
 
+import med from './assets/medlogo.png';
+import { Link, useNavigate } from 'react-router-dom';
+
+
+import Clock from './assets/clock.png';
 function Navigation() {
-    const images = [
-     
-       ' https://th.bing.com/th/id/OIP.Bzttx9EWdmsHcU5m4RjBMAHaFh?w=234&h=180&c=7&r=0&o=5&pid=1.7',
-      'https://th.bing.com/th/id/OIP.GYvGGm_yYh3sNfUgAjod2AHaE7?w=249&h=180&c=7&r=0&o=5&pid=1.7',
-      'https://th.bing.com/th/id/OIP.0ygQJUpLY9fXwu1tozFn8gHaE7?w=276&h=184&c=7&r=0&o=5&pid=1.7',
-      'https://th.bing.com/th/id/OIP.8wx-bBHnEfUwoy207zdueQHaFW?w=222&h=180&c=7&r=0&o=5&pid=1.7',
-      'https://th.bing.com/th/id/OIP.FgYKlot7yUDDmd5kJN6FjAHaFW?rs=1&pid=ImgDetMain',
-      'https://c8.alamy.com/comp/2D9N337/african-american-female-paramedic-standing-in-front-of-ambulance-car-2D9N337.jpg'
-    ];
+  const [showmenu,setshowmenu] = useState(false);
+  
+  const navigate = useNavigate();
+
+  function handleappointment() {
+    navigate('/appointment');
+  }
   return (
-    <section>
+    <section id='section'>
+      <nav>
       <div id='navigationcontent'>
         <img src={med} alt='medical logo' class='medicalimage'/>
         <Link to='/' activeClassName="active" className='desktopmenu'>Home</Link>
@@ -25,15 +28,62 @@ function Navigation() {
         <Link to='/news' activeClassName="active" className='desktopmenu'>News</Link>
         <Link to='/contact' activeClassName="active" className='desktopmenu'>Contact</Link>
       </div>
+      <img src={Menu} alt='menu' class='hamburger' onClick={()=>setshowmenu(!showmenu)}/>
+      <div class ='navmenu' style = {{display:showmenu? 'flex':'none'}}>
+        <Link to='/' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Home</Link>
+        <Link to='/services' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Services</Link>
+        <Link to='/staff' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Staff</Link>
+        <Link to='/appointment' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Appointment</Link>
+        <Link to='/news' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>News</Link>
+        <Link to='/contact' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Contact</Link>
+      </div>
+      </nav>
       <div className="scrolling-text">Kailazana <span id='mmc'>MMC</span></div>
       <div>
-        <p id='introcont'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How's your day going? <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do you want to check health on <span id='mmc'>MMC</span>  </p>
-       <div id='btn'> <button>Lets take your queue number</button> </div>
+        <p id='introcont'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How's your day going? <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do you want to check health on <span id='mmc'>MMC</span>  </p>
+       <div id='btn'> <button onClick={handleappointment}>Lets take your queue number</button> </div>
       </div>
-      <div id='bottom'>
-      <Slideshow images={images} />
-      <div id='calendar'> <Calendar/></div>
+     <div id='features'>
+      <div id='onlinesystem'>
+        <img src={Net} alt='network' class='featureimage'/>
+        <h3 class='featurehead'>Online System</h3>
+        <br/>
+        <br/>
+        <p class='featuretext'>Our hospital boasts<br/> a thriving digital platform, offering an<br/> extensive online ecosystem <br/>for patient care and services</p>
       </div>
+
+      <div id='time'>
+        <img src={Clock} alt='network' class='featureimage'/>
+        <h3 class='featurehead'>24 Hours Open</h3>
+        <br/>
+        <br/>
+        <p class='featuretext'>Accessible around the clock, our hospital provides unwavering 24/7 availability, ensuring you receive prompt care whenever you need it</p>
+      </div>
+
+      <div id='access'>
+        <img src={med} alt='network' class='featureimage'/>
+        <h3 class='featurehead'>Easy Access</h3>
+        <br/>
+        <br/>
+        <p class='featuretext'>With a focus on convenience, our hospital offers seamless and hassle-free access, ensuring that healthcare is always within your reach</p>
+      </div>
+
+      <div id='care'>
+        <img src={med} alt='network' class='featureimage'/>
+        <h3 class='featurehead'>Personalized Care</h3>
+        <br/>
+        <br/>
+        <p class='featuretext'>Our hospital goes the extra mile, ensuring individualized treatments and unwavering support for your optimal well-being</p>
+      </div>
+
+      <div id='facilities'>
+        <img src={med} alt='network' class='featureimage'/>
+        <h3 class='featurehead'>More facilities</h3>
+        <br/>
+        <br/>
+        <p class='featuretext'>We have abundance of facilities, providing you with a comprehensive range of services and amenities for your utmost comfort and convenience</p>
+      </div>
+     </div>
     </section>
   )
 }
