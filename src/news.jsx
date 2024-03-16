@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import med from './assets/medlogo.png';
 import React, { useState } from 'react'
 import Menu from './assets/hamburger.png';
+import './news.css'
 function News(){
   const [showmenu,setshowmenu] = useState(false);
     return(
@@ -27,6 +28,9 @@ function News(){
         <Link to='/contact' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Contact</Link>
       </div>
       </nav>
+      <div id="tab1">
+           
+      </div>
       </section>
     )
 }

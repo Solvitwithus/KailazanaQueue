@@ -105,6 +105,7 @@ color:rgb(228, 213, 213);
   }
   #btn{
     text-align: center;
+   
   }
 #features{
   display: flex;
@@ -246,4 +247,7 @@ color:rgb(228, 213, 213);
     }
   
 
+}
+.featuretext{
+  font-size: 1rem;
 }

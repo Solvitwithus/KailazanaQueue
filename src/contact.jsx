@@ -3,8 +3,14 @@ import { Link } from 'react-router-dom';
 import med from './assets/medlogo.png';
 import React, { useState } from 'react'
 import Menu from './assets/hamburger.png';
+import './contacts.css';
+import IG from './assets/igg.png'
+import FB from './assets/fbb.png'
+import Twit from './assets/twit.png'
+import Linked from './assets/link.png'
 function Contact(){
   const [showmenu,setshowmenu] = useState(false);
+  
     return(
         <section>
              
@@ -28,6 +34,62 @@ function Contact(){
         <Link to='/contact' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Contact</Link>
       </div>
       </nav>
+      <div>
+
+
+<h2 id="header">Contacts</h2>
+<p id="introchannel">Feel free to reach us through the following channels</p>
+
+<div id="icons">
+  <img src={IG} alt='Instagram' class="iconimgg"/>
+  <img src={FB} alt='Facebook' class="iconimgg"/>
+  <img src={Twit} alt='Twitter' class="iconimgg"/>
+  <img src={Linked} alt='LinkedIn' class="iconimgg"/>
+
+</div>
+<p id="introchannel">You can also contact us through email or phone</p>
+<p id="introchannel">kailazanammchospial.ac.ke</p>
+<p id="introchannel">+254 756439087</p>
+<hr/>
+<h2 id="header">leave Feedback</h2>
+<hr/>
+      </div>
+      <div id="bottom">
+              <div id="experience">
+                 <p id="star">Rate your experience</p>
+                 
+            <span class="stars">&#9733;</span>
+            <span class="stars">&#9733;</span>
+            <span class="stars">&#9733;</span>
+            <span class="stars">&#9733;</span>
+            <span class="stars">&#9733;</span>
+            <p id="rightcopy">&copy;2024.Kailazanammc All rights reserved</p>
+              </div>
+              <div id="formsection">
+               <form action='' method='POSt'>
+                <div>
+                <label for="name">Name:</label>
+                <br/>
+                <input id="name" name='name' type='text' placeholder='username' required/>
+                </div>
+
+
+                <div>
+                <label for="email">Email:</label>
+                <br/>
+                <input id="name" name='email' type='email' placeholder='email' required/>
+                </div>
+
+                <div>
+                <label for="email">Comment:</label>
+                <br/>
+                <input id="comment" name='comment' type='text' placeholder='enter comment' required/>
+                </div>
+                <button type='reset'> Reset</button>
+                <button > Submit</button>
+               </form>
+              </div>
+      </div>
       </section>
     )
 }

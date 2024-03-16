@@ -1,0 +1,41 @@
+
+#firstpart {
+    display: flex;
+    float: right;
+   
+    width: 30%;
+  }
+  #job{
+    color:rgb(204, 137, 12);
+    font-weight: bolder;
+  }
+  #hor {
+    border: none;
+    border-top: 2px solid rgb(204, 137, 12);
+    width: 50%;
+    margin-top: 11px;
+    margin-left: 1rem;
+  }
+  
+  #desc {
+  
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color:rgb(2, 128, 212);
+  }
+
+  #description {
+    width: 80%;
+    margin-top: 3rem;
+   text-align: center;
+   display: flex;
+  }
+  #btn{
+   margin-left: 10rem;
+
+padding:1px;
+  }
+
+ 

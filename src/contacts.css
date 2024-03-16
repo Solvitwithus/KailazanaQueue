@@ -1,0 +1,100 @@
+#header{
+    align-self:center;
+    color:black;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+#introchannel{
+    text-align: center;
+    color:hwb(0 0% 100%);
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+#icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    
+}
+.iconimgg{
+    height:2.5rem;
+    width:3rem;
+    padding-right: 20px;
+}
+.iconimgg:hover{
+    height:2.7rem;
+    width:3.2rem;
+    padding-right: 20px;
+    cursor: pointer;
+}
+#bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.4rem;
+}
+#experience{
+    background-color: rgb(160, 158, 157);
+    width:40%;
+}
+#experience:hover{
+    background-color: hsl(36, 10%, 90%);
+    width:40%;
+}
+#star{
+    padding: 10px;
+font-size: 1rem;
+}
+.stars {
+    display: inline-block;
+    font-size: 24px;
+    cursor: pointer;
+    color: rgb(128, 78, 17);
+}
+
+.stars:hover,
+.stars:hover ~ .stars,
+.stars.checked,
+.stars.checked ~ .stars {
+    color: gold;
+}
+#formsection{
+   width:40%;
+   height: 5rem;
+
+}
+#name{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #a85f5f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#comment{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #a85f5f;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#name:hover{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #d81717;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#comment:hover{
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #d81717;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+#rightcopy{
+    font-size: 1.2rem;
+    color: black;
+}

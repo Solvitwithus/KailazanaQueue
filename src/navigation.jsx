@@ -41,7 +41,7 @@ function Navigation() {
       <div className="scrolling-text">Kailazana <span id='mmc'>MMC</span></div>
       <div>
         <p id='introcont'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;How's your day going? <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Do you want to check health on <span id='mmc'>MMC</span>  </p>
-       <div id='btn'> <button onClick={handleappointment}>Lets take your queue number</button> </div>
+       <div id='btn'> <button  onClick={handleappointment}>Lets take your queue number</button> </div>
       </div>
      <div id='features'>
       <div id='onlinesystem'>

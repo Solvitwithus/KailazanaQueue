@@ -2,8 +2,13 @@ import { Link } from 'react-router-dom';
 import React, { useState } from 'react'
 import Menu from './assets/hamburger.png';
 import med from './assets/medlogo.png';
+import './staff.css';
+import Generals from './servicekind/generalservices';
 function Staff(){
   const [showmenu,setshowmenu] = useState(false);
+  const handleOnClick = () => {
+    window.location.href = 'mailto:kamirujohn344@gmail.com';
+  };
     return(
         <section>
              
@@ -27,6 +32,24 @@ function Staff(){
         <Link to='/contact' activeClassName="active" className='desktopmenu'  class='phonemenu' onClick={()=>setshowmenu(false)}>Contact</Link>
       </div>
       </nav>
+      
+      <div id="firstpart">
+        <p id='job'>JOBS</p>
+        <span id="hor"></span>
+        <br/>
+  
+     </div>
+     <div id="description">
+     <p id ="desc">
+     Kailazana MMC IS ONE OF THE MOST COMPREHENSIVE HOSPITAL WITH DEDICATED TEAM TO PROVIDE THE HIGHEST QUALITY AND MOST COMPASSIONATE CARE.
+     </p>
+     <div >
+      <button id="btn" onClick={handleOnClick}>Application Email</button>
+     </div>
+     
+      </div>
+      <hr/>
+      <Generals/>
       </section>
     )
 }
